@@ -8,7 +8,8 @@ class Posts extends Component {
     this.props.firebase.ref('posts/' + key).set({
       title: post.title,
       upvote: post.upvote + 1,
-      downvote: post.downvote
+      downvote: post.downvote,
+      content: post.content
     });
   }
 
@@ -16,7 +17,8 @@ class Posts extends Component {
     this.props.firebase.ref('posts/' + key).set({
       title: post.title,
       upvote: post.upvote,
-      downvote: post.downvote + 1
+      downvote: post.downvote + 1,
+      content: post.content
     });
   }
 
@@ -56,27 +58,21 @@ class Posts extends Component {
               </BrowserRouter>
         }
         </div>
-        
+
         <div>
         {
-          Object.keys(posts).map(function(key) {
+          Object.keys(posts).reverse().map(function(key) {
             return (
               <div key={key}>
                 <div>Title: { posts[key].title }</div>
-                <div>Upvotes: { posts[key].upvote }</div>
-                <div>Downvotes: { posts[key].downvote }</div>
+                <div>Content: { posts[key].content }</div>
+                <div>Agrees: { posts[key].upvote }</div>
                 <div>
-                  <button 
+                  <button
                     onClick={ _this.handleUpvote.bind(this, posts[key], key) }
                     type="button"
                   >
-                    Upvote
-                  </button>
-                  <button 
-                    onClick={ _this.handleDownvote.bind(this, posts[key], key) }
-                    type="button"
-                  >
-                    Downvote
+                     Agree
                   </button>
                 </div>
               </div>
