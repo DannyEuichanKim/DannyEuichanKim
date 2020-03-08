@@ -63,6 +63,7 @@ h2{
   border-radius: 25px;
   text-align: left;
   margin-left: 5%;
+  padding-left:10px;
 }
 input.comment{
   background-color: white;
@@ -100,4 +101,7 @@ input.comment{
   margin-top: 2%;
   height: 40%;
   width: 80%;
+}
+.center{
+  text-align: center;
 }
