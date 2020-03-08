@@ -29,9 +29,13 @@ class Posts extends Component {
     this.props.firebase.ref('posts/' + key).set({
       title: post.title,
       upvote: post.upvote,
-      downvote: post.downvote + 1,
+      downvote: post.downvote,
       content: post.content
     });
+  }
+
+  getPost = (key) => {
+    this.props.firebase.ref('posts/' + key).on()
   }
 
   render() {
@@ -58,8 +62,6 @@ class Posts extends Component {
           Object.keys(posts).reverse().map(function(key) {
             return (
               <div id ="scr" class="containerPosts">
-                
-
                 <br />
                 <div id="post1" class="post" onclick="">
                   <div class="title" key={key}>

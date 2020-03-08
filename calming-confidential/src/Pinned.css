@@ -8,7 +8,8 @@ body {
   margin-left: 450px;
   border: 5px solid black;
   display: inline-block;
-  background-color: white;
+  background-color: #20c997;
+  border-radius: 25px;
 }
  
 ul {
@@ -17,11 +18,13 @@ ul {
 }
  
 h1 {
-  margin-left: 600px;
+  text-align: center;
+  font-family: cursive;
 }
 
 h3 {
-  font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
+  font-family: Cursive;
+  font: bold 20px/1.5;
   color: blue;
 }
  
@@ -31,7 +34,8 @@ li img {
 }
  
 li p {
-  font: 200 12px/1.5 Georgia, Times New Roman, serif;
+  font: 200 13px/1.5 Georgia, Times New Roman, serif;
+  color: #343a40;
 }
  
 li {
@@ -43,4 +47,19 @@ li:hover {
   background: #eee;
   cursor: pointer;
 }
+
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:active {
+  text-decoration: none;
+}
+
+
 
