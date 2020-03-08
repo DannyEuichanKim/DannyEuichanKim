@@ -19,13 +19,13 @@ class Pinned extends Component {
                 <p>Confident Confidential is great, but if you need a more tailored, consistent...</p>
               </a>
             </li>
-              
+
             <li>
               <img src="http://lorempixum.com/100/100/nature/2" />
               <h3>Weekly Events Discussion Page</h3>
               <p>Use this thread as a place to.... </p>
             </li>
-         
+
             <li>
               <img src="http://lorempixum.com/100/100/nature/3" />
               <a href="https://www.classes.cs.uchicago.edu/archive/2020/winter/20370-1/">

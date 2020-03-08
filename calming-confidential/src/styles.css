@@ -31,16 +31,6 @@ h2{
     background-color: #868e96;
     border-radius: 25px;
 }
-.margin{
-  margin-left: 1%;
-}
-.addpost{
-  outline: 3px solid gray-dark;
-  height: 10vw;
-  width: 100%;
-  background-color: #868e96;
-  border-radius: 25px;
-}
 .title{
   font-size: 1.5vw;
   color: black;
