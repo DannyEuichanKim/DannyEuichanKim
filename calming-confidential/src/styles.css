@@ -1,17 +1,18 @@
+
 html{
   background-color: #87CEFA;
 }
-h1{
+/*h1{
   text-align: center;
   margin-bottom: 10vh;
   margin-top: 5vh;
 }
 h2{
   margin-top: 5vh;
-}
+}*/
 .container{
         width: 75%;
-    background-color: white;
+    background-color: gray-dark;
     border-radius: 25px;
     margin: 0 auto;
     }
@@ -24,14 +25,22 @@ h2{
     text-align: center;
     }
 .post{
-    outline: 3px solid #87CEFA;
-    height: 8vw;
+    outline: 3px solid gray-dark;
+    height: 10vw;
     width: 100%;
-    background-color: white;
+    background-color: #868e96;
     border-radius: 25px;
 }
+.title{
+  font-size: 20px;
+  color: black;
+  height: 25%;
+  width: 95%;
+  margin-left: 2%;
+}
 .text{
-  height: 90%;
+  color: black;
+  height: 40%;
   width: 95%;
   margin-left: 5%;
 }
@@ -41,6 +50,15 @@ h2{
   height: 60%;
   border-radius: 25px;
   text-align: left;
+}
+.agrees{
+  color: orange;
+  text-align: right;
+  margin-right: 11%;
+}
+.menu{
+  text-align: right;
+  margin-right: 2%;
 }
 #comment1{
   width: 90%;
