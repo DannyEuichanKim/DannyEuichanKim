@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom';
 import Navbar from '../Navbar/index.js'
 
+var ReactFitText = require('react-fittext');
+
 class Posts extends Component {
   handleUpvote = (post, key) => {
     this.props.firebase.ref('posts/' + key).set({
@@ -55,19 +57,21 @@ class Posts extends Component {
           Object.keys(posts).reverse().map(function(key) {
             return (
               <div id ="scr" class="container">
+                
+
                 <br />
                 <div id="post1" class="post" onclick="">
                   <div class="title" key={key}>
                       <div>Title: { posts[key].title }</div>
                   </div>
                   <div class="text" key={key}>
+                      <ReactFitText compressor={Math.max(Math.log10(posts[key].content.length)*3, 7)}>
                       <div>Content: { posts[key].content }</div>
-                  </div>
-                  <div class="agrees" key={key}>
-                      <div>Agrees: { posts[key].upvote }</div>
+                      </ReactFitText>
                   </div>
                   <div class="menu" key={key}>
                     <div>
+                      Agrees: { posts[key].upvote } &nbsp;
                       <button
                         onClick={ _this.handleUpvote.bind(this, posts[key], key) }
                         type="button"
