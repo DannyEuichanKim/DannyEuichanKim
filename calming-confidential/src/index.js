@@ -10,7 +10,7 @@ import './bootstrap.css'
 import Routes from './routes';
 import registerServiceWorker from './utils/registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+/*ReactDOM.render(<App />, document.getElementById('root'));*/
 ReactDOM.render(
   <Routes history={browserHistory} />,
   document.getElementById('root')

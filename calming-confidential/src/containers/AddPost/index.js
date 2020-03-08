@@ -33,7 +33,9 @@ class AddPost extends Component {
       title: this.state.title,
       upvote: 0,
       downvote: 0,
-      content: this.state.content
+      content: this.state.content,
+      comments: ["yp", "fo"],
+      num_comments: 2
     });
 
     this.setState({
