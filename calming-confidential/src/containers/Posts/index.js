@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import { BrowserRouter } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+// import { BrowserRouter } from 'react-router-dom';
 import Navbar from '../Navbar/index.js'
 
 var ReactFitText = require('react-fittext');
@@ -57,7 +57,7 @@ class Posts extends Component {
         {
           Object.keys(posts).reverse().map(function(key) {
             return (
-              <div id ="scr" class="container">
+              <div id ="scr" class="containerPosts">
                 
 
                 <br />
