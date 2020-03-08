@@ -1,6 +1,6 @@
 
 html{
-  background-color: #87CEFA;
+  background-color: gray-dark;
 }
 /*h1{
   text-align: center;
@@ -10,7 +10,7 @@ html{
 h2{
   margin-top: 5vh;
 }*/
-.container{
+.containerPosts{
         width: 75%;
     background-color: gray-dark;
     border-radius: 25px;
@@ -30,6 +30,16 @@ h2{
     width: 100%;
     background-color: #868e96;
     border-radius: 25px;
+}
+.margin{
+  margin-left: 1%;
+}
+.addpost{
+  outline: 3px solid gray-dark;
+  height: 10vw;
+  width: 100%;
+  background-color: #868e96;
+  border-radius: 25px;
 }
 .title{
   font-size: 1.5vw;

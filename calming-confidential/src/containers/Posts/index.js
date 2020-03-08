@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import { BrowserRouter } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+// import { BrowserRouter } from 'react-router-dom';
 import Navbar from '../Navbar/index.js'
 
 var ReactFitText = require('react-fittext');
@@ -55,6 +55,10 @@ class Posts extends Component {
     console.log(this.state.single_comment);
   }
 
+  getPost = (key) => {
+    this.props.firebase.ref('posts/' + key).on()
+  }
+
   render() {
     let posts = this.props.posts;
     let _this = this;
@@ -80,9 +84,7 @@ class Posts extends Component {
             let comments = posts[key].comments;
             let num = posts[key].num_comments;
             return (
-              <div id ="scr" class="container">
-
-
+              <div id ="scr" class="containerPosts">
                 <br />
                 <div id="post1" class="post" onclick="">
                   <div class="title" key={key}>
