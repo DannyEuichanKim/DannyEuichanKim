@@ -41,22 +41,9 @@ class Posts extends Component {
     return (
       <div className="Posts">
         <div>
-        {
-              <BrowserRouter>
-              <Link to="/add-post"><button id="1"><p>Create a post</p></button></Link>
-              </BrowserRouter>
-
-        }
-        {
-              <BrowserRouter>
-              <Link to="/Resources"><button id="2"><p>Resources</p></button></Link>
-              </BrowserRouter>
-        }
-        {
-              <BrowserRouter>
-              <Link to="/Pinned-Posts"><button id="3"><p>Pinned Posts</p></button></Link>
-              </BrowserRouter>
-        }
+          <a href="/add-post"><button>Make a Post!</button></a>
+          <a href="/resources"><button>Resources</button></a>
+          <a href="/pinned"><button>Pinned Posts</button></a>
         </div>
 
         <div>
