@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom';
 
-
 class Posts extends Component {
   handleUpvote = (post, key) => {
     this.props.firebase.ref('posts/' + key).set({
@@ -56,13 +55,15 @@ class Posts extends Component {
               </BrowserRouter>
         }
         </div>
-        
         <div>
         {
           Object.keys(posts).map(function(key) {
             return (
+              <div id ="scr" class="container">
+              <div id="post1" class="post" onclick="">
+              
               <div key={key}>
-                <div>Title: { posts[key].title }</div>
+                <div class="text"><h3>Title: { posts[key].title }</h3></div>
                 <div>Content: { posts[key].content }</div>
                 <div>Upvotes: { posts[key].upvote }</div>
                 <div>Downvotes: { posts[key].downvote }</div>
@@ -79,7 +80,16 @@ class Posts extends Component {
                   >
                     Downvote
                   </button>
+
+                  <button
+                    type="button"
+                  >
+                    Add Comment
+                  </button>
                 </div>
+              </div>
+
+              </div>
               </div>
             );
           })
