@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
+
 
 class Posts extends Component {
   handleUpvote = (post, key) => {
@@ -35,7 +38,28 @@ class Posts extends Component {
 
     return (
       <div className="Posts">
-        { Object.keys(posts).map(function(key) {
+        <div>
+        {
+              <BrowserRouter>
+              <Link to="/add-post"><button id="1"><p>Create a post</p></button></Link>
+              </BrowserRouter>
+
+        }
+        {
+              <BrowserRouter>
+              <Link to="/Resources"><button id="2"><p>Resources</p></button></Link>
+              </BrowserRouter>
+        }
+        {
+              <BrowserRouter>
+              <Link to="/Pinned-Posts"><button id="3"><p>Pinned Posts</p></button></Link>
+              </BrowserRouter>
+        }
+        </div>
+        
+        <div>
+        {
+          Object.keys(posts).map(function(key) {
             return (
               <div key={key}>
                 <div>Title: { posts[key].title }</div>
@@ -57,7 +81,9 @@ class Posts extends Component {
                 </div>
               </div>
             );
-        })}
+          })
+        }
+        </div>
       </div>
     );
   }
