@@ -1,0 +1,91 @@
+
+html{
+  background-color: #87CEFA;
+}
+/*h1{
+  text-align: center;
+  margin-bottom: 10vh;
+  margin-top: 5vh;
+}
+h2{
+  margin-top: 5vh;
+}*/
+.container{
+        width: 75%;
+    background-color: gray-dark;
+    border-radius: 25px;
+    margin: 0 auto;
+    }
+.panel{
+    outline: 3px solid #87CEFA;
+        height: 15vw;
+        width: 100%;
+    background-color: white;
+    border-radius: 25px;
+    text-align: center;
+    }
+.post{
+    outline: 3px solid gray-dark;
+    height: 10vw;
+    width: 100%;
+    background-color: #868e96;
+    border-radius: 25px;
+}
+.title{
+  font-size: 1.5vw;
+  color: black;
+  height: 25%;
+  width: 95%;
+  margin-left: 2%;
+}
+.text{
+  font-size: 1vw;
+  color: black;
+  height: 50%;
+  width: 95%;
+  margin-left: 5%;
+}
+.comment{
+  background-color: teal;
+  margin-top: 2%;
+  width: 95%;
+  height: 60%;
+  border-radius: 25px;
+  text-align: left;
+  margin-left: 5%;
+}
+.agrees{
+  color: orange;
+  text-align: right;
+  margin-right: 11%;
+}
+.menu{
+  color: orange;
+  text-align: right;
+  margin-right: 2%;
+}
+#comment1{
+  width: 90%;
+  height: 45%;
+}
+#comment2{
+  width: 90%;
+  height: 45%;
+}
+#comment3{
+  width: 90%;
+  height: 45%;
+}
+#post2 {
+  margin-top: 20%;
+}
+.login{
+  width: 90%;
+}
+#userpost{
+  margin-left: 5%;
+  margin-top: 2%;
+  height: 40%;
+  width: 80%;
+}
+
