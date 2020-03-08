@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Navbar from '../Navbar/index.js'
 
 class AddPost extends Component {
   constructor() {
@@ -44,6 +45,7 @@ class AddPost extends Component {
   render() {
     return (
       <div className="AddPost">
+      <Navbar />
         <input
           type="text"
           placeholder="Write the title of your post"

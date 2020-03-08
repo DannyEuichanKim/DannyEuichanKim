@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom';
+import Navbar from '../Navbar/index.js'
 
 class Posts extends Component {
   handleUpvote = (post, key) => {
@@ -48,13 +49,8 @@ class Posts extends Component {
 
     return (
       <div className="Posts">
+        <Navbar />
         <div>
-          <a href="/add-post"><button>Make a Post!</button></a>
-          <a href="/resources"><button>Resources</button></a>
-          <a href="/pinned"><button>Pinned Posts</button></a>
-        </div>
-
-        
         {
           Object.keys(posts).reverse().map(function(key) {
             return (
