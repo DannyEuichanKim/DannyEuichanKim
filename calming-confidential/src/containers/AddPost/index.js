@@ -52,7 +52,7 @@ class AddPost extends Component {
         />
         <input
           type="text"
-          placeholder="Write your post"
+          placeholder="Write the content of your post"
           onChange={ this.handleChange2 }
           value={ this.state.content }
         />

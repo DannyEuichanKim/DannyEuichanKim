@@ -7,7 +7,8 @@ class Posts extends Component {
     this.props.firebase.ref('posts/' + key).set({
       title: post.title,
       upvote: post.upvote + 1,
-      downvote: post.downvote
+      downvote: post.downvote,
+      content: post.content
     });
   }
 
@@ -15,7 +16,8 @@ class Posts extends Component {
     this.props.firebase.ref('posts/' + key).set({
       title: post.title,
       upvote: post.upvote,
-      downvote: post.downvote + 1
+      downvote: post.downvote + 1,
+      content: post.content
     });
   }
 
@@ -38,47 +40,28 @@ class Posts extends Component {
     return (
       <div className="Posts">
         <div>
-        {
-              <BrowserRouter>
-              <Link to="/add-post"><button id="1"><p>Create a post</p></button></Link>
-              </BrowserRouter>
-
-        }
-        {
-              <BrowserRouter>
-              <Link to="/Resources"><button id="2"><p>Resources</p></button></Link>
-              </BrowserRouter>
-        }
-        {
-              <BrowserRouter>
-              <Link to="/Pinned-Posts"><button id="3"><p>Pinned Posts</p></button></Link>
-              </BrowserRouter>
-        }
+          <a href="/add-post"><button>Make a Post!</button></a>
+          <a href="/resources"><button>Resources</button></a>
+          <a href="/pinned"><button>Pinned Posts</button></a>
         </div>
+
         <div>
         {
-          Object.keys(posts).map(function(key) {
+          Object.keys(posts).reverse().map(function(key) {
             return (
               <div id ="scr" class="container">
               <div id="post1" class="post" onclick="">
               
               <div key={key}>
-                <div class="text"><h3>Title: { posts[key].title }</h3></div>
+                <div>Title: { posts[key].title }</div>
                 <div>Content: { posts[key].content }</div>
-                <div>Upvotes: { posts[key].upvote }</div>
-                <div>Downvotes: { posts[key].downvote }</div>
+                <div>Agrees: { posts[key].upvote }</div>
                 <div>
                   <button
                     onClick={ _this.handleUpvote.bind(this, posts[key], key) }
                     type="button"
                   >
-                    Upvote
-                  </button>
-                  <button
-                    onClick={ _this.handleDownvote.bind(this, posts[key], key) }
-                    type="button"
-                  >
-                    Downvote
+                     Agree
                   </button>
 
                   <button
