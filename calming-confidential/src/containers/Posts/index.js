@@ -5,7 +5,86 @@ import Navbar from '../Navbar/index.js'
 
 var ReactFitText = require('react-fittext');
 
+class Post extends Component {
+  constructor(key)
+  {
+    this.state = {
+      disabled : false
+    };
+    this.key = key;
+  }
+
+  handleUpvote = (post, key) => {
+    if(this.state.disabled){
+      return;
+    }
+    this.props.firebase.ref('posts/' + key).set({
+      title: post.title,
+      upvote: post.upvote + 1,
+      downvote: post.downvote,
+      content: post.content
+    });
+    this.setState({disabled: true});
+  }
+
+  handleDownvote = (post, key) => {
+    this.props.firebase.ref('posts/' + key).set({
+      title: post.title,
+      upvote: post.upvote,
+      downvote: post.downvote + 1,
+      content: post.content
+    });
+  }
+
+  handleComment = (post, key) => {
+    this.props.firebase.ref('posts/' + key).set({
+      title: post.title,
+      upvote: post.upvote,
+      downvote: post.downvote + 1,
+      content: post.content
+    });
+  }
+  render(){
+    let posts = this.props.posts;
+    let _this = this;
+  return (
+    <div className="Post">
+    <div id ="scr" class="container">
+      <br />
+      <div id="post1" class="post" onclick="">
+        <div class="title">
+            <div>Title: { posts[this.key].title }</div>
+        </div>
+        <div class="text">
+            <ReactFitText compressor={Math.max(Math.log10(posts[this.key].content.length)*3, 7)}>
+            <div>Content: { posts[this.key].content }</div>
+            </ReactFitText>
+        </div>
+        <div class="menu">
+          <div>
+            Agrees: { posts[this.key].upvote } &nbsp;
+            <button
+              onClick={ _this.handleUpvote.bind(this, posts[this.key], this.key) }
+              type="button"
+            >
+               Agree
+            </button>
+
+            <button
+              type="button"
+            >
+              Add Comment
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  );}
+}
+
 class Posts extends Component {
+
   handleUpvote = (post, key) => {
     this.props.firebase.ref('posts/' + key).set({
       title: post.title,
