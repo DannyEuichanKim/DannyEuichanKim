@@ -54,6 +54,9 @@ h2{
   text-align: left;
   margin-left: 5%;
 }
+input.comment{
+  background-color: white;
+}
 .agrees{
   color: orange;
   text-align: right;
