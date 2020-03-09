@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
 // import { BrowserRouter } from 'react-router-dom';
@@ -88,11 +89,11 @@ class Posts extends Component {
                 <br />
                 <div id="post1" class="post" onclick="">
                   <div class="title" key={key}>
-                      <div>Title: { posts[key].title }</div>
+                      <div>{ posts[key].title }</div>
                   </div>
                   <div class="text" key={key}>
                       <ReactFitText compressor={Math.max(Math.log10(posts[key].content.length)*3, 7)}>
-                      <div>Content: { posts[key].content }</div>
+                      <div>{ posts[key].content }</div>
                       </ReactFitText>
                   </div>
                   <div class="menu" key={key}>
@@ -112,21 +113,21 @@ class Posts extends Component {
                         Add Comment
                       </button>
                     </div>
-                    <input
-                      type="text"
-                      class="comment"
-                      placeholder="Add a Comment"
-                      onChange={ _this.handleChange }
-                      value={ _this.state.single_comment }
-                      style = {{height: 40}}
-                    />
-                    { comments.map(function (obj){
-                      return(
-                        <div class="comment" style = {{height: 40}}>{ obj }</div>
-                      );
-                    })}
                   </div>
                 </div>
+                <input
+                  type="text"
+                  class="comment"
+                  placeholder="Add a Comment"
+                  onChange={ _this.handleChange }
+                  value={ _this.state.single_comment }
+                  style = {{height: 40}}
+                />
+                { comments.map(function (obj){
+                  return(
+                    <div class="comment" style = {{height: 40}}>{ obj }</div>
+                  );
+                })}
               </div>
 
             );
