@@ -46,7 +46,7 @@ h2{
 }
 .addpost{
   outline: 3px solid gray-dark;
-  height: 10vw;
+  height: 40vw;
   width: 100%;
   background-color: #868e96;
   border-radius: 25px;
@@ -73,6 +73,7 @@ h2{
   border-radius: 25px;
   text-align: left;
   margin-left: 5%;
+  padding-left:10px;
 }
 input.comment{
   background-color: white;
@@ -110,4 +111,20 @@ input.comment{
   margin-top: 2%;
   height: 40%;
   width: 80%;
+}
+.center{
+  text-align: center;
+}
+.welcome{
+  margin-left: 5%;
+}
+.loginb{
+  height: 1.8vw;
+  width: 5%;
+  background-color: red;
+  border-radius: 10px;
+  text-align: center;
+}
+.loginl{
+  color: black;
 }

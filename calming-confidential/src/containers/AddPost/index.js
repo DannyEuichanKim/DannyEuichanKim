@@ -48,36 +48,36 @@ class AddPost extends Component {
   render() {
     return (
       <div className="AddPost">
-      <Navbar />
-      <div id ="scr" class="containerPosts">
-      <br />
-      <div id="post1" class="addpost" onclick="">
+        <Navbar />
+        <div id ="scr" class="containerPosts">
         <br />
-        <div class="margin">
-        <input size="139"
-          type="text"
-          placeholder="Write the title of your post"
-          onChange={ this.handleChange }
-          value={ this.state.title }
-        />
-        <br />
-        <textarea size="140" style = {{width: 1127, height: 55}}
-          type="text"
-          placeholder="Write the content of your post"
-          onChange={ this.handleChange2 }
-          value={ this.state.content }
-        />
-        <div class="menu">
-        <button
-          type="submit"
-          onClick={ this.handleSubmit }
-        >
-          Submit
-        </button>
+          <div id="post1" class="addpost" onclick="">
+            <br />
+            <div class="margin">
+            <input size="139"
+              type="text"
+              placeholder="Write the title of your post"
+              onChange={ this.handleChange }
+              value={ this.state.title }
+            />
+            <br /><br />
+            <textarea size="140" style = {{width: 1127, height: 490}}
+              type="text"
+              placeholder="Write the content of your post"
+              onChange={ this.handleChange2 }
+              value={ this.state.content }
+            />
+            <div class="menu">
+            <button
+              type="submit"
+              onClick={ this.handleSubmit }
+            >
+              Submit
+            </button>
+            </div>
+            </div>
+          </div>
         </div>
-        </div>
-      </div>
-      </div>
       </div>
     );
   }
