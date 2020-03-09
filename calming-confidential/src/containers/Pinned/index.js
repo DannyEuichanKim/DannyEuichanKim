@@ -13,9 +13,10 @@ class Pinned extends Component {
     return (
       <div className="Posts">
         <Navbar />
-        <div id ="scr" class="container">
-        <h1>Pinned Posts</h1>
-          <ul>
+        <div id ="scr" class="container"
+        style={{marginLeft: "15%", marginTop: "5%"}}>
+        <h1 style={{color: "black"}}>Pinned Posts</h1>
+          <ul style={{width: "100%", textAlign: "left"}}>
             <li>
               <img src={lom} width="100" height="100"/>
               <a href="https://lean0n.me/">
