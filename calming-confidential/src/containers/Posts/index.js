@@ -36,6 +36,10 @@ class Posts extends Component {
   }
 
   handleComment = (post, key) => {
+    let x = this.state.single_comment;
+    if(x == ""){
+      return;
+    }
     this.props.firebase.ref('posts/' + key).set({
       title: post.title,
       upvote: post.upvote,
@@ -127,6 +131,9 @@ class Posts extends Component {
                   style = {{height: 40}}
                 />
                 { comments.map(function (obj){
+                  if(obj ==""){
+                    return(<div></div>);
+                  }
                   return(
                     <div class="comment" style = {{height: 40, verticalAlign:"middle"}}>{ obj }</div>
                   );
