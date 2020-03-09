@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
 // import { BrowserRouter } from 'react-router-dom';
@@ -120,10 +121,11 @@ class Posts extends Component {
                   placeholder="Add a Comment"
                   onChange={ _this.handleChange }
                   value={ _this.state.single_comment }
+                  style = {{height: 40}}
                 />
                 { comments.map(function (obj){
                   return(
-                    <div class="comment">{ obj }</div>
+                    <div class="comment" style = {{height: 40, verticalAlign:"middle"}}>{ obj }</div>
                   );
                 })}
               </div>
