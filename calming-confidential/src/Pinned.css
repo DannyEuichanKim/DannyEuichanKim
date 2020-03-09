@@ -3,7 +3,7 @@
 body {
   background-color : green;
 }
- 
+
 .container {
   margin-left: 450px;
   border: 5px solid black;
@@ -11,15 +11,18 @@ body {
   background-color: #20c997;
   border-radius: 25px;
 }
- 
+
+.righty-tighty {
+  float: right;
+}
+
 ul {
   list-style-type: none;
   width: 500px;
 }
- 
+
 h1 {
   text-align: center;
-  font-family: cursive;
 }
 
 h3 {
@@ -27,22 +30,22 @@ h3 {
   font: bold 20px/1.5;
   color: blue;
 }
- 
+
 li img {
   float: left;
   margin: 0 15px 0 0;
 }
- 
+
 li p {
   font: 200 13px/1.5 Georgia, Times New Roman, serif;
   color: #343a40;
 }
- 
+
 li {
   padding: 10px;
   overflow: auto;
 }
- 
+
 li:hover {
   background: #eee;
   cursor: pointer;
@@ -60,6 +63,3 @@ a:hover {
 a:active {
   text-decoration: none;
 }
-
-
-
