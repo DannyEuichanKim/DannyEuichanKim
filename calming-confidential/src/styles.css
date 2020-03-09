@@ -105,3 +105,16 @@ input.comment{
 .center{
   text-align: center;
 }
+.welcome{
+  margin-left: 5%;
+}
+.loginb{
+  height: 1.8vw;
+  width: 5%;
+  background-color: red;
+  border-radius: 10px;
+  text-align: center;
+}
+.loginl{
+  color: black;
+}

@@ -125,7 +125,7 @@ class Posts extends Component {
                 />
                 { comments.map(function (obj){
                   return(
-                    <div class="comment" style = {{height: 40}}>{ obj }</div>
+                    <div class="comment" style = {{height: 40, verticalAlign:"middle"}}>{ obj }</div>
                   );
                 })}
               </div>
