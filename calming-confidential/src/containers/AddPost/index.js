@@ -60,8 +60,8 @@ class AddPost extends Component {
           onChange={ this.handleChange }
           value={ this.state.title }
         />
-        <br />
-        <textarea size="140" style = {{width: 1127, height: 55}}
+        <br /><br />
+        <textarea size="140" style = {{width: 1127, height: 490}}
           type="text"
           placeholder="Write the content of your post"
           onChange={ this.handleChange2 }
