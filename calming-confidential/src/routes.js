@@ -15,12 +15,12 @@ import Login from './containers/Login';
 
 const Routes = (props) => (
   <Router {...props}>
-    <Route path="/" component={ App }>
+    <Route exact path="/" component={ App }>
       <IndexRoute component={ Login } />
-      <Route path="/posts" component={ Posts } />
-      <Route path="/add-post" component={ AddPost } />
-	  <Route path="/resources" component={ Resources } />
-      <Route path="/pinned" component={ Pinned } />
+      <Route exact path="/posts" component={ Posts } />
+      <Route exact path="/add-post" component={ AddPost } />
+	  <Route exact path="/resources" component={ Resources } />
+      <Route exact path="/pinned" component={ Pinned } />
     </Route>
   </Router>
 );
