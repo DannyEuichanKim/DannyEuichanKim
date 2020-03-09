@@ -112,20 +112,20 @@ class Posts extends Component {
                         Add Comment
                       </button>
                     </div>
-                    <input
-                      type="text"
-                      class="comment"
-                      placeholder="Add a Comment"
-                      onChange={ _this.handleChange }
-                      value={ _this.state.single_comment }
-                    />
-                    { comments.map(function (obj){
-                      return(
-                        <div class="comment">{ obj }</div>
-                      );
-                    })}
                   </div>
                 </div>
+                <input
+                  type="text"
+                  class="comment"
+                  placeholder="Add a Comment"
+                  onChange={ _this.handleChange }
+                  value={ _this.state.single_comment }
+                />
+                { comments.map(function (obj){
+                  return(
+                    <div class="comment">{ obj }</div>
+                  );
+                })}
               </div>
 
             );
