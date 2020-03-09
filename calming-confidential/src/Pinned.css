@@ -5,10 +5,10 @@ body {
 }
 
 .container {
-  margin-left: 450px;
+  margin-left: 25%;
   border: 5px solid black;
   display: inline-block;
-  background-color: #20c997;
+  background-color: #FFD300;
   border-radius: 25px;
 }
 
@@ -17,6 +17,7 @@ body {
 }
 
 ul {
+  text-align: center;
   list-style-type: none;
   width: 500px;
 }
@@ -26,7 +27,6 @@ h1 {
 }
 
 h3 {
-  font-family: Cursive;
   font: bold 20px/1.5;
   color: blue;
 }
