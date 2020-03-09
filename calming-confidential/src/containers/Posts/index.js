@@ -99,14 +99,14 @@ class Posts extends Component {
                   <div class="menu" key={key}>
                     <div>
                       Agrees: { posts[key].upvote } &nbsp;
-                      <button
+                      <button class='bouton'
                         onClick={ _this.handleUpvote.bind(this, posts[key], key) }
                         type="button"
                       >
                          Agree
                       </button>
 
-                      <button
+                      <button class='bouton'
                         onClick={ _this.handleComment.bind(this, posts[key], key) }
                         type="button"
                       >
