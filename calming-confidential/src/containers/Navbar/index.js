@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import logo from './logo.png';
 
 /* navbar template found at https://getbootstrap.com/docs/4.0/components/navbar/ */
 class Navbar extends Component {
@@ -6,7 +7,7 @@ class Navbar extends Component {
     return(
       <div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="/">Home</a>
+          <a class="navbar-brand" href="/"><img src={ logo }></img></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -22,6 +23,9 @@ class Navbar extends Component {
                 <a class="nav-link" href="/pinned">Pinned Posts</a>
               </li>
             </ul>
+            <div class="navbar-brand">
+               <h1>Calming Confidential</h1>
+            </div>
           </div>
         </nav>
       </div>

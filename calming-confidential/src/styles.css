@@ -10,6 +10,12 @@ html{
 h2{
   margin-top: 5vh;
 }*/
+.bouton {
+  margin-top: .5%;
+  margin-left: 5px;
+  border-radius: 25px;
+  padding: 1%;
+}
 .containerPosts{
         width: 75%;
     background-color: gray-dark;
@@ -28,7 +34,7 @@ h2{
     outline: 3px solid gray-dark;
     height: 10vw;
     width: 100%;
-    background-color: #868e96;
+    background-color: #cbe6f5;
     border-radius: 25px;
 }
 .margin{
