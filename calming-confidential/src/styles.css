@@ -10,11 +10,15 @@ html{
 h2{
   margin-top: 5vh;
 }*/
+.agrees{
+  color: black;
+}
 .bouton {
   margin-top: .5%;
   margin-left: 5px;
   border-radius: 25px;
   padding: 1%;
+  outline: none;
 }
 .containerPosts{
         width: 75%;

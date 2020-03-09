@@ -96,9 +96,10 @@ class Posts extends Component {
                       </ReactFitText>
                   </div>
                   <div class="menu" key={key}>
-                    <div>
-                      Agrees: { posts[key].upvote } &nbsp;
+                    <div style={{color: '#000'}}>
+                      Agreements: { posts[key].upvote } &nbsp;
                       <button class='bouton'
+                        style={{outline: 'none'}}
                         onClick={ _this.handleUpvote.bind(this, posts[key], key) }
                         type="button"
                       >
@@ -106,6 +107,7 @@ class Posts extends Component {
                       </button>
 
                       <button class='bouton'
+                        style={{outline: 'none'}}
                         onClick={ _this.handleComment.bind(this, posts[key], key) }
                         type="button"
                       >
@@ -118,6 +120,7 @@ class Posts extends Component {
                   type="text"
                   class="comment"
                   placeholder="Add a Comment"
+                  style={{outline: 'none'}}
                   onChange={ _this.handleChange }
                   value={ _this.state.single_comment }
                 />
